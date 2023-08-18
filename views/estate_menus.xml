@@ -1,0 +1,146 @@
+<odoo>
+    <data>
+
+        <record id="view_first_level_form" model="ir.ui.view">
+            <field name="name">Houses Form View</field>
+            <field name="model">estate.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>
+                        <field name="name"/>
+                        </h1>
+                        <group col="2">
+                            <group>
+                                <field name="postcode"/>
+                                <field name="date_availability"/>
+                            </group>
+                            <group>
+                                <field name="expected_price"/>
+                                <field name="selling_price"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description of the House">
+                                <group col="2">
+                                    <field name="description"/>
+                                    <group>
+                                    <field name="bedrooms"/>
+                                    <field name="living_room"/>
+                                    <field name="facades"/>
+                                    <field name="garage"/>
+                                    </group>
+                                    <group>
+                                    <field name="garden_area"/>
+                                    <field name="garden_orientation"/>
+                                    <field name="active"/>
+                                    <field name="state"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_first_level_tree" model="ir.ui.view">
+            <field name="name">Houses Tree View</field>
+            <field name="model">estate.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="postcode"/>
+                    <field name="bedrooms"/>
+                    <field name="living_room"/>
+                    <field name="expected_price"/>
+                    <field name="selling_price"/>
+                    <field name="date_availability"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_first_level_menu" model="ir.actions.act_window">
+            <field name="name">Houses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">estate.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="test_second_level_menu"
+                      name="Houses"
+                      action="action_first_level_menu"
+                      parent="test_first_level_menu"
+                      sequence="10"/>
+
+
+<!--        <record id="view_third_level_form" model="ir.ui.view">
+            <field name="name">Houses Form View</field>
+            <field name="model">estate.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="postcode"/>
+                            <field name="date_availability"/>
+                            <field name="expected_price"/>
+                            <field name="selling_price"/>
+                            <field name="bedrooms"/>
+                            <field name="living_room"/>
+                            <field name="facades"/>
+                            <field name="garage"/>
+                            <field name="garden_area"/>
+                            <field name="garden_orientation"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_third_level_tree" model="ir.ui.view">
+            <field name="name">Houses Tree View</field>
+            <field name="model">estate.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date_availability"/>
+                    <field name="expected_price"/>
+                    <field name="selling_price"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_third_level_menu" model="ir.actions.act_window">
+            <field name="name">Sold Houses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">estate.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="test_fourth_level_menu"
+                      name="Sold Houses"
+                      action="action_third_level_menu"
+                      parent="test_third_level_menu"
+                      sequence="10"/>
+-->
+
+            <menuitem id="test_menu_root"
+                  name="House Estates"
+                  sequence="10"/>
+            <menuitem id="test_first_level_menu"
+                      name="Available"
+                      parent="test_menu_root"
+                      sequence="10"/>
+            <menuitem id="test_third_level_menu"
+                      name="Sold"
+                      parent="test_menu_root"
+                      sequence="10"/>
+
+    </data>
+</odoo>
