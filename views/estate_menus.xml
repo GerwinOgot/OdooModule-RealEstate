@@ -1,7 +1,7 @@
 <odoo>
     <data>
 
-        <record id="view_first_level_form" model="ir.ui.view">
+         <record id="view_first_level_form" model="ir.ui.view">
             <field name="name">Houses Form View</field>
             <field name="model">estate.model</field>
             <field name="arch" type="xml">
@@ -18,6 +18,7 @@
                             <group>
                                 <field name="expected_price"/>
                                 <field name="selling_price"/>
+
                             </group>
                         </group>
                         <notebook>
@@ -29,12 +30,16 @@
                                     <field name="living_room"/>
                                     <field name="facades"/>
                                     <field name="garage"/>
+
+
                                     </group>
                                     <group>
                                     <field name="garden_area"/>
                                     <field name="garden_orientation"/>
                                     <field name="active"/>
                                     <field name="state"/>
+                                    <field name="x_swimming_pool"/>
+
                                     </group>
                                 </group>
                             </page>
@@ -56,6 +61,8 @@
                     <field name="expected_price"/>
                     <field name="selling_price"/>
                     <field name="date_availability"/>
+                    <field name="x_swimming_pool"/>
+
                 </tree>
             </field>
         </record>
@@ -67,12 +74,12 @@
             <field name="res_model">estate.model</field>
             <field name="view_mode">tree,form</field>
         </record>
+    <menuitem id="test_second_level_menu"
+          name="Houses"
+          action="action_first_level_menu"
+          parent="test_first_level_menu"
+          sequence="10"/>
 
-        <menuitem id="test_second_level_menu"
-                      name="Houses"
-                      action="action_first_level_menu"
-                      parent="test_first_level_menu"
-                      sequence="10"/>
 
 
 <!--        <record id="view_third_level_form" model="ir.ui.view">
