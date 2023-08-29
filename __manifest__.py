@@ -28,6 +28,10 @@
         'views/estate_model_views.xml',
         'views/views.xml',
         'views/templates.xml',
+        'report/report.xml',
+        'report/estate_report.xml'
+
+
     ],
     # only loaded in demonstration mode
     'demo': [

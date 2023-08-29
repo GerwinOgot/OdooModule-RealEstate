@@ -18,6 +18,7 @@ class RealEstate(models.Model):
     garage = fields.Boolean(string='Garage')
     garden_area = fields.Integer(string='Garden Area')
     swimming_pool = fields.Boolean(string='Swimming Pool')
+    Arcades = fields.Boolean(string='Arcade')
     garden_orientation = fields.Selection(
         string='Garden Orientation',
         selection=[

@@ -1,0 +1,12 @@
+<odoo>
+    <record id="report_Estate" model="ir.actions.report">
+        <field name="name">Unit Report</field>
+        <field name="model">estate.model</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">OdooModule-RealEstate-main.estate_unit_report</field>
+        <field name="report_file">OdooModule-RealEstate-main.estate_unit_report</field>
+        <field name="binding_model_id" ref="model_estate_model"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

@@ -18,6 +18,7 @@
                             <group>
                                 <field name="expected_price"/>
                                 <field name="selling_price"/>
+                                <field name="total_amount"/>
 
                             </group>
                         </group>
@@ -30,7 +31,7 @@
                                     <field name="living_room"/>
                                     <field name="facades"/>
                                     <field name="garage"/>
-
+                                    <field name="swimming_pool"/>
 
                                     </group>
                                     <group>
@@ -38,7 +39,7 @@
                                     <field name="garden_orientation"/>
                                     <field name="active"/>
                                     <field name="state"/>
-                                    <field name="x_swimming_pool"/>
+                                    <field name="Arcades"/>
 
                                     </group>
                                 </group>
@@ -60,8 +61,10 @@
                     <field name="living_room"/>
                     <field name="expected_price"/>
                     <field name="selling_price"/>
+                    <field name="total_amount"/>
                     <field name="date_availability"/>
-                    <field name="x_swimming_pool"/>
+                    <field name="swimming_pool"/>
+
 
                 </tree>
             </field>
@@ -74,11 +77,13 @@
             <field name="res_model">estate.model</field>
             <field name="view_mode">tree,form</field>
         </record>
-    <menuitem id="test_second_level_menu"
-          name="Houses"
-          action="action_first_level_menu"
-          parent="test_first_level_menu"
-          sequence="10"/>
+            <menuitem id="test_second_level_menu"
+                  name="Houses"
+                  action="action_first_level_menu"
+                  parent="test_first_level_menu"
+                  sequence="10"/>
+
+
 
 
 
